@@ -28,6 +28,7 @@ const AppRouter = () => {
         />
       )}
       <Route exact path="/" element={<Navigate replace to="/posts" />}/> 
+      <Route exact path="/login" element={<Navigate replace to="/posts" />}/> 
       </Routes>
       : 
       <Routes>
@@ -39,7 +40,7 @@ const AppRouter = () => {
         key={route.path}
         />
       )}
-      <Route exact path="/" element={<Navigate replace to="/login" />}/> 
+      <Route path="*" element={<Navigate replace to="/login" />}/> 
       </Routes> 
     )
 }
